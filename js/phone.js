@@ -1,12 +1,12 @@
-const loadPhone = async (searchText=13,isShowAll) => {
+const loadPhone = async (searchText = 13, isShowAll) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const data = await res.json();
     const phones = data.data;
-    displayPhones(phones,isShowAll);
+    displayPhones(phones, isShowAll);
 }
 
 
-const displayPhones = (phones,isShowAll) => {
+const displayPhones = (phones, isShowAll) => {
 
     const phoneContainer = document.getElementById('phone-container');
     // clear phone container cards before adding new cards
@@ -23,8 +23,8 @@ const displayPhones = (phones,isShowAll) => {
 
     //display only first 12 phones if no show all
 
-    if(!isShowAll)
-    phones = phones.slice(0, 12);
+    if (!isShowAll)
+        phones = phones.slice(0, 12);
 
 
     phones.forEach(phone => {
@@ -50,7 +50,7 @@ const displayPhones = (phones,isShowAll) => {
         phoneContainer.appendChild(phoneCard);
 
     });
-toggleLoaddingring(false);
+    toggleLoaddingring(false);
 
 }
 
@@ -67,13 +67,12 @@ const phoneSearch = (isShowAll) => {
 
 
 //loading ring
-const toggleLoaddingring = (isLoading)=>{
+const toggleLoaddingring = (isLoading) => {
     const loadingRing = document.getElementById('loading-ring');
-    if(isLoading){
+    if (isLoading) {
         loadingRing.classList.remove('hidden');
     }
-    else
-    {
+    else {
         loadingRing.classList.add('hidden');
     }
 }
@@ -81,17 +80,54 @@ const toggleLoaddingring = (isLoading)=>{
 
 // show all button
 
-const handleShowAll =()=>{
+const handleShowAll = () => {
     phoneSearch(true);
 
 }
 
 
 //show details
-const handleShowDetails = async(id)=>{
+const handleShowDetails = async (id) => {
 
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
+    const phone = data.data;
+    shhowPhoneDetails(phone);
+
+}
+
+const shhowPhoneDetails = (phone) => {
+    console.log(phone);
+
+
+    const showDetailContainer = document.getElementById('show-detail-container');
+
+    showDetailContainer.innerHTML = `
+                    <div class="flex justify-center">
+                        <img src="${phone.image}" alt="" class="align-middle">
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-center">${phone.name}</h3>
+
+
+                    <div class=" my-3">
+                        <p><b>Storage : </b>${phone.mainFeatures.storage}</p>
+                    <p><b>Display Size : </b>${phone.mainFeatures.displaySize}</p>
+                    <p><b>Chipset : </b>${phone.mainFeatures.chipset}</p>
+                    <p><b>Memory : </b>${phone.mainFeatures.memory}</p>
+                    <p><b>Slug : </b>${phone.slug}</p>
+                    <p><b>Release Data:</b>${phone.releaseDate}</p>
+                    <p><b>Brand : </b>${phone.brand}</p>
+                    <p><b>GPS : </b>${phone.others.GPS}</p>
+                    </div>
+
+
+    `
+
+
+
+    //show the modal
+    my_modal_5.showModal();
 
 }
 
