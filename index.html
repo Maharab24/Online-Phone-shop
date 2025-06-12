@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+
+    <main class="container mx-auto">
+
+        <section class="flex flex-col justify-center my-10">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Search your phone
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Find exactly what you're looking for with our lightning-fast search. Discover apps, contacts,
+                    messages, and more in seconds.
+                </p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-1 max-w-2xl mx-auto mb-16">
+                <div class="flex flex-col sm:flex-row">
+                    <div class="relative flex-1 ">
+                        <input id="search-field" type="text" placeholder="Search Your Phone"
+                            class="w-full py-5 px-6 text-lg rounded-2xl border-none ">
+
+                    </div>
+                    <button onclick="phoneSearch()"
+                        class="bg-primary hover:bg-[#1e40af] text-white font-semibold py-5 px-8 rounded-2xl transition-all duration-300 mt-4 sm:mt-0 sm:ml-4">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--loading show-->
+
+        <section>
+            <div id="loading-ring" class="text-center my-40 hidden">
+                <span class="loading loading-bars loading-xs"></span>
+                <span class="loading loading-bars loading-sm"></span>
+                <span class="loading loading-bars loading-md"></span>
+                <span class="loading loading-bars loading-lg"></span>
+                <span class="loading loading-bars loading-xl"></span>
+            </div>
+            <div id="phone-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-4">
+
+            </div>
+            <!--Show all button-->
+            <div class="hidden  my-10 text-center" id="show-all-btn">
+                <button onclick="handleShowAll()" class="btn btn-primary">Show all</button>
+            </div>
+        </section>
+
+        <!--show detail modal-->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
+    </main>
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top Section -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2">Hot Gadgets</h2>
+                <p class="text-lg mb-1">You can definitely work.</p>
+                <p class="text-2xl font-bold text-blue-400">Job Premium</p>
+            </div>
+
+            <!-- Columns Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Browse jobs</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Remote jobs</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Startup jobs</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Company jobs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Popular</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">UIUX Design</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Product Design</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Back-End Developer</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Front-End Developer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resource Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Resource</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Faq</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Support</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Career Tips</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
