@@ -111,14 +111,14 @@ const shhowPhoneDetails = (phone) => {
 
 
                     <div class=" my-3">
-                        <p><b>Storage : </b>${phone.mainFeatures.storage}</p>
-                    <p><b>Display Size : </b>${phone.mainFeatures.displaySize}</p>
-                    <p><b>Chipset : </b>${phone.mainFeatures.chipset}</p>
-                    <p><b>Memory : </b>${phone.mainFeatures.memory}</p>
+                        <p><b>Storage : </b>${phone.mainFeatures?.storage}</p>
+                    <p><b>Display Size : </b>${phone.mainFeatures?.displaySize}</p>
+                    <p><b>Chipset : </b>${phone.mainFeatures?.chipset}</p>
+                    <p><b>Memory : </b>${phone.mainFeatures?.memory}</p>
                     <p><b>Slug : </b>${phone.slug}</p>
                     <p><b>Release Data:</b>${phone.releaseDate}</p>
                     <p><b>Brand : </b>${phone.brand}</p>
-                    <p><b>GPS : </b>${phone.others.GPS}</p>
+                    <p><b>GPS : </b>${phone.others?.GPS}</p>
                     </div>
 
 
