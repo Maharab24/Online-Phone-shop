@@ -12,7 +12,7 @@ https://maharab24.github.io/Online-Phone-shop/
 
 # Features
 
-- 🏠 Homepage showcasing all phones with images, names, and prices  
+- 🏠 Homepage showcasing all phones with images, names, and details  
 - 🔍 Search functionality to find phones by keyword  
 - 📁 Category browsing (e.g., Xiaomi, Samsung, Apple)  
 - 📱 Mobile-responsive design using DaisyUi
