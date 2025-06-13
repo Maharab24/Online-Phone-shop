@@ -1,6 +1,6 @@
 # Online Phone Shop 🛒
 
-A  online phone store built with HTML CSS JavaScript featuring a clean UI and a custom API backend.
+A  online phone store built with **HTML**, **CSS**, **JavaScript** featuring a clean UI and a custom **API** backend.
 
 ---
 
@@ -12,10 +12,10 @@ https://maharab24.github.io/Online-Phone-shop/
 
 # Features
 
-- 🏠 Homepage showcasing all phones with images, names, and details  
-- 🔍 Search functionality to find phones by keyword  
-- 📁 Category browsing (e.g., Xiaomi, Samsung, Apple)  
-- 📱 Mobile-responsive design using DaisyUi
+- 🏠 **Homepage** showcasing all phones with images, names, and details  
+- 🔍 **Search** functionality to find phones by keyword  
+- 📁 **Category** browsing (e.g., Xiaomi, Samsung, Apple)  
+- 📱 **Mobile-responsive** design using DaisyUi
 
 ---
 
