@@ -6,7 +6,7 @@ A  online phone store built with HTML CSS JavaScript featuring a clean UI and a 
 
 # 🔍 Demo
 
-https://github.com/Maharab24/Online-Phone-shop
+https://maharab24.github.io/Online-Phone-shop/
 
 ---
 
