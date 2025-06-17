@@ -1,6 +1,6 @@
 # Online Phone Shop 🛒
 
-A  online phone store built with **HTML**, **CSS**, **JavaScript** featuring a clean UI and a custom **API** backend.
+An  online phone store built with **HTML**, **CSS**, **JavaScript** featuring a clean UI and a custom **API** backend.
 
 ---
 
